@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <title>View Choice</title>
+    <link rel="stylesheet" href="css/styleopacity.css" type="text/css">
+</head>
+
+<body>
+    <div id="background_opacity">
+        <form name="monFormulaire" method="post" action="traitement.php"><!--Début de mon formulaire-->
+            <h3><u>Veuillez choisir les options que vous désirez voir</u></h3>
+
+            <div id="contener"><!--mon contener-->
+                <nav class="element"><!--première box-->
+                     <h4>Navigation</h4>
+                         <ul>
+                            <li><a href="index.html">Page d'accueil</a></li>
+                        </ul>
+                </nav>
+                <div class="element"><!--deuxième box-->
+                    <label for="langue"><b><u>Choisissez votre langue:</u></b></label>
+                    <select name="langue" id="langue"><!--une liste déroulante-->
+                        <option value="Français" >Français</option>
+                        <option value="Espagnol">Espagnol</option>
+                        <option value="Anglais" selected>Anglais</option>
+                        <option value="Allemand">Allemand</option>
+                    </select>
+                </div>
+                <div class="element"><!--troisième box-->
+                    <h4><u>Unités de mesure: </u></h4>
+                    <ul><!--Les boutons radio-->
+                        <li><b>Degré:</b> 
+                            <ul>
+                                <li><input type="radio" name="degre" value="C" id="celcius"/> <label for="celcius">Celcius</label></li>
+                                <li><input type="radio" name="degre" value="F" id="fahrenheit"/> <label for="fahrenheit">Fahrenheit</label></li>
+                            </ul>   
+                        </li>
+                        <li><b>Vitesse du vent:</b> 
+                                <ul>
+                                    <li><input type="radio" name="vent" value="Km/h" id="Km/h"/> <label for="Km/h">Km/h</label></li>
+                                    <li><input type="radio" name="vent" value="m/s" id="m/s"/> <label for="m/s">m/s</label></li>
+                                    <li><input type="radio" name="vent" value="kts" id="kts"/> <label for="kts">kts</label> </li>
+                                </ul>       
+                        </li>
+                    </ul>
+                </div>
+                <div class="element"><!--quatrième box-->
+                    <h4><b><u>Que voulez vous voir: </u></b></h4>
+                    <ul><!--les case à cocher-->
+                        <li>Température<input type="checkbox"/></li>
+                        <li>Couverture nuageuse<input type="checkbox"/></li>
+                        <li>Vitesse du vent<input type="checkbox"/></li>
+                        <li>Visibilité<input type="checkbox"/></li>
+                        <li>Pluie<input type="checkbox"/></li>
+                        <li>Lever du soleil<input type="checkbox"/></li>
+                        <li>Coucher du soleil<input type="checkbox"/></li>
+                        <li>Durée du jour<input type="checkbox"/></li>
+                        <li>Lever de la lune<input type="checkbox"/></li>
+                        <li>Coucher de la lune<input type="checkbox"/></li>
+                        <li>Phases de la lune<input type="checkbox"/></li>
+                        <li>Heure des marées<input type="checkbox"/></li>
+                    </ul>
+                </div>
+            </div>
+            <p class="align"><input type="submit" value="Enter" /><input type="reset" value="annuler"/></p>
+        </form>
+
+        <hr>
+
+        <footer>	
+            <p class="align-right">&copy; F.&nbsp;NICOLAY</p>
+        </footer>
+    </div>
+</body>
+
+</html>

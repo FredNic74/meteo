@@ -1,0 +1,139 @@
+@font-face {
+    font-family: 'cantarellbold';
+    src: url('../fonts/Cantarell-Bold-webfont.eot');
+    src: url('../fonts/Cantarell-Bold-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/Cantarell-Bold-webfont.woff2') format('woff2'),
+         url('../fonts/Cantarell-Bold-webfont.woff') format('woff'),
+         url('../fonts/Cantarell-Bold-webfont.ttf') format('truetype'),
+         url('../fonts/Cantarell-Bold-webfont.svg#cantarellbold') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+body
+{
+	background-image: url("../img/liege_compress.png");
+	background-size: cover;/*étend l'image du fond en plein écran*/
+	color: #471467;
+	margin: 50px;
+	font-family: cantarellbold,Comic sans MS, verdana, Arial;
+}
+
+#background_opacity
+{
+	z-index: -10;
+	top: 0; left: 0; right: 0; bottom: 0;
+	background-color: rgba(255, 255, 255, 0.5); /* L'opacite se regle ici */
+}
+
+html
+{
+	min-height: 100%;/*emp^che le background gradient de se répéter si la page est trop petite*/
+}
+
+h1
+{
+	text-align: center;
+}
+
+h3, h4
+{
+	text-align: center;
+	color: #471467;
+}
+
+p
+{
+	font-size: 1em;
+}
+
+.align/*aligne au centre le Tel*/
+{
+	text-align: center;
+}
+
+.align-right/*aligne à droite le copyright*/
+{
+	text-align: right;
+}
+
+.center/*class pour centrer l'image*/
+{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+	width: 20%;
+}
+
+#map 
+{
+	height: 600px;
+	width: 100%;
+}
+
+.centerBelgium/*class pour centrer la carte*/
+{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+	width: 50%;
+	min-width: 300px;
+}
+
+a:hover /*lien apparaisse en blanc et gras quand on passe dessus*/
+{
+	color: white;
+	font-weight: bold;
+}
+
+a{
+	font-size: 1em;
+}
+
+nav
+{/*propriétés de la banière de navigation*/
+	background-color: yellowgreen;
+	width: 50px;
+	height: 100px;
+	padding: 10px;
+	text-align: left;
+	color: black;	
+}
+
+#contener
+{/*appliqué à une de mes section, qui devient le contener flexbox*/
+	display: flex;/*permet l'usage de flexbox, ici usage standard de flexbox ==> alignement de gauche à droite*/
+	align-items: baseline;
+	justify-content: space-between;
+	flex-wrap: wrap;
+	height: auto;
+}
+
+.element
+{
+	width: auto;
+	height: auto;
+}
+
+@media screen and (max-width: 1024px)/*application des media query pour écrans plus petit*/ 
+{
+	section{
+		flex-direction: column;/*superposition de mes div*/
+		width: auto;/*design elastic sur petit écran*/
+	}
+	nav{/*suppression de la banière*/
+		display: none;
+	}
+}
+
+@media all and (max-device-width: 480px)/*application des media query pour navigateur mobiles*/ 
+{
+    section{
+		flex-direction: column;/*superposition de mes div*/
+		width: auto;/*design elastic sur petit écran*/
+		
+	}
+	nav{/*suppression de la banière*/
+		display: none;
+	}
+}

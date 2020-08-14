@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="fr"><!--destiné à un public francophone-->
+
+<head>
+		<meta charset="utf-8">
+		<title>Météo Liège</title>
+		<link rel="icon" type="image/png" sizes="16x16" href="img/nuage.png">
+		<link rel="stylesheet" href="https://unpkg.com/leaflet@1.5.1/dist/leaflet.css" integrity="sha512-xwE/Az9zrjBIphAcBb3F6JVqxf46+CDLwfLMHloNu6KEQCAWi6HcDUbeOfBIptF7tcCzusKFjFw2yuvEpDL9wQ==" crossorigin=""/>
+		<link rel="stylesheet" href="css/styleopacity.css" type="text/css">
+		<meta name="description" content="Météo concernant la région Liégeoise"><!--description qui s'affichera dans les favoris, dans certains browser-->
+		<meta name="keywords" content="Météo, Liège, Belgique">
+		<script src="jquery-3.4.1.min.js"></script> 
+</head>	
+
+
+<body>
+	<div id="background_opacity">
+	<header>
+		<h1><span id="ville">Liège</span></h1>
+	</header>
+
+	<section>
+		<h2>Descriptif:</h2>
+		<p class="contenant" id="description" >Liège est une ville francophone de l'est de la Belgique. Elle est le chef-lieu de la province de Liège et la capitale économique de la Wallonie. De 972 à 1795, elle fut la capitale de la Principauté de Liège2. Du VIIIe au XVIe siècle, elle fut le siège du vaste évêché de Liège, héritier de la Civitas Tungrorum.
+		En 2013, Liège compte quelque 200 000 habitants. Son agglomération est peuplée d'environ 700 000 habitants. Par le nombre d'habitants, c'est la première agglomération wallonne, la troisième agglomération de Belgique après Bruxelles et Anvers et la quatrième commune après Anvers, Gand et Charleroi.</p>
+		<div id="map"></div>
+	</section>
+
+	<div id="contener">
+		<nav class="element"><!--ma banière de navigation-->
+			<h3>Navigation</h3>
+				<ul>
+					<li><a href="formulaire.html">Mise en forme de votre page</a></li>
+					<li><a href="auteur.html">Auteur</a></li>
+				</ul>
+		</nav>
+		<div class="element"><!--première boite-->
+			<h3>Quelques informations météo:</h3>
+				<ul>
+					<li class="contenant" id="temp">Température: <span class="contenu">25°</span><span class="unite">C</span></li>
+					<li class="contenant" id="nuage">Couverture nuageuse: <span class="contenu">aucune</span><img id=icon src="img/weather-icon.png" alt="une icone meteo"></li>
+					<li class="contenant" id="vent">Vitesse du vent: <span class="contenu">10</span><span class="unite">Km/h</span></li>
+					<li class="contenant" id="pression">pression: <span class="contenu">920</span><span class="unite">hPa</span></li>
+					<li class="contenant" id="visibilite">Visibilité: <span class="contenu">10</span><span class="unite">Km</span></li>
+					<li class="contenant" id="pluie">Pluie: <span class="contenu">0</span><span class="unite">%</span></li>
+				</ul>
+		</div>
+		<div class="element"><!--deuxième boite-->
+			<h3>Ephémérides:</h3>
+				<ul>
+					<li class="contenant" id="lever">Lever du soleil: <span class="contenu">0600</span><span class="unite">hr</span></li>
+					<li class="contenant" id="coucher">Coucher du soleil: <span class="contenu">1800</span><span class="unite">hr</span></li>	
+					<li class="contenant" id="duree">Durée du jour: <span class="contenu">1200</span><span class="unite">hr</span></li>		
+					<li class="contenant" id="leverlune">Lever de la lune: <span class="contenu">1700</span><span class="unite">hr</span></li>
+					<li class="contenant" id="coucherlune">Coucher de la lune: <span class="contenu">0600</span><span class="unite">hr</span></li>
+					<li class="contenant" id="phaselune">Phases de la lune: <span class="contenu">1<sup>er</sup></span><span class="unite">croissant</span></li>	
+					<li class="contenant" id="maree">Heure des marées: <span class="contenu">0500</span><span class="unite">hr</span> / <span class="contenu">1500</span><span class="unite">hr</span></li>		
+				</ul>
+		</div>	
+	</div>
+
+	<hr/>
+
+	<footer>	
+		<p class="align-right">&copy; F.&nbsp;NICOLAY</p>
+	</footer>
+</div>
+<script src="https://unpkg.com/leaflet@1.5.1/dist/leaflet.js" integrity="sha512-GffPMF3RvMeYyc1LWMHtK8EbPv0iNZ8/oTtHPx9/cc2ILxQ+u905qIwdpULaqDkyBKgOaB57QTMg7ztg8Jm2Og==" crossorigin=""></script>
+<script src="meteo.js"></script>
+</body>
+
+
+</html>
